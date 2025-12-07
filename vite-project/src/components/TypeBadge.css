@@ -1,0 +1,26 @@
+.type-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.type-badge.grama { background-color: #78C850; }
+.type-badge.venenoso { background-color: #A040A0; }
+.type-badge.fogo { background-color: #F08030; }
+.type-badge.água { background-color: #6890F0; }
+.type-badge.elétrico { background-color: #F8D030; }
+.type-badge.inseto { background-color: #A8B820; }
+.type-badge.terra { background-color: #E0C068; }
+.type-badge.pedra { background-color: #B8A038; }
+.type-badge.gelo { background-color: #98D8D8; }
+.type-badge.voador { background-color: #A890F0; }
+.type-badge.psíquico { background-color: #F85888; }
+.type-badge.dragão { background-color: #7038F8; }
+.type-badge.normal { background-color: #A8A878; }
+.type-badge.fada { background-color: #EE99AC; }
+.type-badge.lutador { background-color: #C03028; }
+.type-badge.fantasma { background-color: #705898; }

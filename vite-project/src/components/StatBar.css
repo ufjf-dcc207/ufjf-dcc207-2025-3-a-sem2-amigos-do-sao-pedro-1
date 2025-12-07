@@ -1,0 +1,25 @@
+.stat-bar-container {
+  display: grid;
+  grid-template-columns: 45px 1fr 30px;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  font-size: 0.9em;
+}
+.stat-label {
+  font-weight: bold;
+  text-align: left;
+}
+.stat-bar-background {
+  background-color: #e0e0e0;
+  height: 10px;
+  width: 100%;
+}
+.stat-bar-fill {
+  background-color: #4caf50;
+  height: 100%;
+}
+.stat-valor {
+  text-align: right;
+  font-family: monospace;
+}

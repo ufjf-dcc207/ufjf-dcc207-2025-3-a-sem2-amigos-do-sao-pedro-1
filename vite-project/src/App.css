@@ -1,0 +1,13 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-layout > section:first-child {
+  flex: 0 0 35%;
+}
+
+.dashboard-layout > section:last-child {
+  flex: 1;
+}
