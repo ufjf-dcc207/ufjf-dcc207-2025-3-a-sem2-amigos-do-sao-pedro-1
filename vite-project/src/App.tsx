@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import { todosPokemons } from './pokedexData';
 import { DashboardColumn } from './components/DashboardColumn';
@@ -5,8 +6,21 @@ import { TeamPokemonCard } from './components/TeamPokemonCard';
 import { PCPokemonIcon } from './components/PCPokemonIcon';
 
 function App() {
-  const equipePokemons = todosPokemons.filter(p => p.selecionado);
-  const boxPokemons = todosPokemons.filter(p => !p.selecionado);
+  const [pokemons, setPokemons] = useState(todosPokemons);
+  
+  const equipePokemons = pokemons.filter(p => p.selecionado);
+  const boxPokemons = pokemons.filter(p => !p.selecionado);
+
+  function moverPokemon(instanceId: number) {
+    console.log('Movendo pokémon com instanceId:', instanceId);
+    setPokemons(pokemonsAtuais => 
+      pokemonsAtuais.map(pokemon => 
+        pokemon.instanceId === instanceId 
+          ? { ...pokemon, selecionado: !pokemon.selecionado }
+          : pokemon
+      )
+    );
+  }
 
   return (
     <div className="dashboard-layout">
@@ -14,7 +28,7 @@ function App() {
       <DashboardColumn titulo="PC (Box 1)" gridType="pc">
         {boxPokemons.map(pokemon => (
           <PCPokemonIcon
-            key={pokemon.id}
+            key={pokemon.instanceId}
             imagemUrl={pokemon.imagemUrl}
             nome={pokemon.nome}
           />
@@ -24,7 +38,7 @@ function App() {
       <DashboardColumn titulo="Equipe Atual" gridType="time">
         {equipePokemons.map(pokemon => (
           <TeamPokemonCard 
-            key={pokemon.id} 
+            key={pokemon.instanceId} 
             id={pokemon.id}
             imagemUrl={pokemon.imagemUrl}
             nome={pokemon.nome}

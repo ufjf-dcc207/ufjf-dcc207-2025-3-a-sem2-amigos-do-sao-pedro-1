@@ -7,6 +7,7 @@ export interface PokemonStat {
 
 export interface Pokemon {
   id: number;
+  instanceId: number;
   nome: string;
   numero: string;
   imagemUrl: string;
@@ -19,7 +20,7 @@ export interface Pokemon {
 
 export const todosPokemons: Pokemon[] = [
   {
-    id: 7, nome: 'Squirtle', numero: '#007', selecionado: false,
+    id: 7, instanceId: 1, nome: 'Squirtle', numero: '#007', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif',
     tipos: ['Água'],
     estatisticas: [ 
@@ -30,7 +31,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 8, nome: 'Wartortle', numero: '#008', selecionado: false,
+    id: 8, instanceId: 2, nome: 'Wartortle', numero: '#008', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -41,7 +42,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
  {
-    id: 25, nome: 'Pikachu', numero: '#025', selecionado: true,
+    id: 25, instanceId: 3, nome: 'Pikachu', numero: '#025', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif',
     tipos: ['Elétrico'],
     estatisticas: [
@@ -52,7 +53,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Água', 'Voador'],
   },
   {
-    id: 7, nome: 'Squirtle', numero: '#007', selecionado: true,
+    id: 7, instanceId: 4, nome: 'Squirtle', numero: '#007', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif',
     tipos: ['Água'],
     estatisticas: [ 
@@ -63,7 +64,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 94, nome: 'Gengar', numero: '#094', selecionado: true,
+    id: 94, instanceId: 5, nome: 'Gengar', numero: '#094', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif',
     tipos: ['Fantasma', 'Venenoso'],
     estatisticas: [
@@ -75,7 +76,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gengar - variação 1 (HP aumentado, SPEED diminuído)
   {
-    id: 94, nome: 'Gengar', numero: '#094', selecionado: false,
+    id: 94, instanceId: 6, nome: 'Gengar', numero: '#094', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif',
     tipos: ['Fantasma', 'Venenoso'],
     estatisticas: [
@@ -87,7 +88,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gengar - variação 2
   {
-    id: 94, nome: 'Gengar', numero: '#094', selecionado: false,
+    id: 94, instanceId: 7, nome: 'Gengar', numero: '#094', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif',
     tipos: ['Fantasma', 'Venenoso'],
     estatisticas: [
@@ -99,7 +100,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gengar - variação 3
   {
-    id: 94, nome: 'Gengar', numero: '#094', selecionado: false,
+    id: 94, instanceId: 8, nome: 'Gengar', numero: '#094', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif',
     tipos: ['Fantasma', 'Venenoso'],
     estatisticas: [
@@ -112,7 +113,7 @@ export const todosPokemons: Pokemon[] = [
 
   // Dragonite (modelo original)
   {
-    id: 149, nome: 'Dragonite', numero: '#149', selecionado: true,
+    id: 149, instanceId: 9, nome: 'Dragonite', numero: '#149', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif',
     tipos: ['Dragão', 'Voador'],
     estatisticas: [
@@ -124,7 +125,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Dragonite - variação 1
   {
-    id: 149, nome: 'Dragonite', numero: '#149', selecionado: false,
+    id: 149, instanceId: 10, nome: 'Dragonite', numero: '#149', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif',
     tipos: ['Dragão', 'Voador'],
     estatisticas: [
@@ -136,7 +137,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Dragonite - variação 2
   {
-    id: 149, nome: 'Dragonite', numero: '#149', selecionado: false,
+    id: 149, instanceId: 11, nome: 'Dragonite', numero: '#149', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif',
     tipos: ['Dragão', 'Voador'],
     estatisticas: [
@@ -148,7 +149,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Dragonite - variação 3
   {
-    id: 149, nome: 'Dragonite', numero: '#149', selecionado: false,
+    id: 149, instanceId: 12, nome: 'Dragonite', numero: '#149', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif',
     tipos: ['Dragão', 'Voador'],
     estatisticas: [
@@ -161,7 +162,7 @@ export const todosPokemons: Pokemon[] = [
 
   // Jigglypuff (modelo original)
   {
-    id: 39, nome: 'Jigglypuff', numero: '#039', selecionado: true,
+    id: 39, instanceId: 13, nome: 'Jigglypuff', numero: '#039', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/jigglypuff.gif',
     tipos: ['Normal', 'Fada'],
     estatisticas: [
@@ -173,7 +174,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Jigglypuff - variação 1
   {
-    id: 39, nome: 'Jigglypuff', numero: '#039', selecionado: false,
+    id: 39, instanceId: 14, nome: 'Jigglypuff', numero: '#039', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/jigglypuff.gif',
     tipos: ['Normal', 'Fada'],
     estatisticas: [
@@ -184,7 +185,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Grama', 'Fada'],
   },
   {
-    id: 39, nome: 'Jigglypuff', numero: '#039', selecionado: false,
+    id: 39, instanceId: 15, nome: 'Jigglypuff', numero: '#039', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/jigglypuff.gif',
     tipos: ['Normal', 'Fada'],
     estatisticas: [
@@ -195,7 +196,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Grama', 'Fada'],
   },
   {
-    id: 39, nome: 'Jigglypuff', numero: '#039', selecionado: false,
+    id: 39, instanceId: 16, nome: 'Jigglypuff', numero: '#039', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/jigglypuff.gif',
     tipos: ['Normal', 'Fada'],
     estatisticas: [
@@ -208,7 +209,7 @@ export const todosPokemons: Pokemon[] = [
 
   // Gyarados (modelo original)
   {
-    id: 130, nome: 'Gyarados', numero: '#130', selecionado: true,
+    id: 130, instanceId: 17, nome: 'Gyarados', numero: '#130', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif',
     tipos: ['Água', 'Voador'],
     estatisticas: [
@@ -220,7 +221,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gyarados - variação 1
   {
-    id: 130, nome: 'Gyarados', numero: '#130', selecionado: false,
+    id: 130, instanceId: 18, nome: 'Gyarados', numero: '#130', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif',
     tipos: ['Água', 'Voador'],
     estatisticas: [
@@ -232,7 +233,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gyarados - variação 2
   {
-    id: 130, nome: 'Gyarados', numero: '#130', selecionado: false,
+    id: 130, instanceId: 19, nome: 'Gyarados', numero: '#130', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif',
     tipos: ['Água', 'Voador'],
     estatisticas: [
@@ -244,7 +245,7 @@ export const todosPokemons: Pokemon[] = [
   },
   // Gyarados - variação 3
   {
-    id: 130, nome: 'Gyarados', numero: '#130', selecionado: false,
+    id: 130, instanceId: 20, nome: 'Gyarados', numero: '#130', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif',
     tipos: ['Água', 'Voador'],
     estatisticas: [
@@ -255,7 +256,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Água', 'Terra'],
   },
   {
-    id: 7, nome: 'Squirtle', numero: '#007', selecionado: false,
+    id: 7, instanceId: 20, nome: 'Squirtle', numero: '#007', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif',
     tipos: ['Água'],
     estatisticas: [ 
@@ -266,7 +267,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 7, nome: 'Squirtle', numero: '#007', selecionado: false,
+    id: 7, instanceId: 21, nome: 'Squirtle', numero: '#007', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif',
     tipos: ['Água'],
     estatisticas: [ 
@@ -277,7 +278,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 7, nome: 'Squirtle', numero: '#007', selecionado: false,
+    id: 7, instanceId: 22, nome: 'Squirtle', numero: '#007', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif',
     tipos: ['Água'],
     estatisticas: [ 
@@ -288,7 +289,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 8, nome: 'Wartortle', numero: '#008', selecionado: true,
+    id: 8, instanceId: 23, nome: 'Wartortle', numero: '#008', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -299,7 +300,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
    {
-    id: 8, nome: 'Wartortle', numero: '#008', selecionado: false,
+    id: 8, instanceId: 24, nome: 'Wartortle', numero: '#008', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -310,7 +311,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 8, nome: 'Wartortle', numero: '#008', selecionado: false,
+    id: 8, instanceId: 25, nome: 'Wartortle', numero: '#008', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -321,7 +322,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 8, nome: 'Wartortle', numero: '#008', selecionado: false,
+    id: 8, instanceId: 26, nome: 'Wartortle', numero: '#008', selecionado: false,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -332,7 +333,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 344, nome: 'Clamperl', numero: '#344', selecionado: true,
+    id: 344, instanceId: 27, nome: 'Clamperl', numero: '#344', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/clamperl.gif',
     tipos: ['Água'],
     estatisticas: [
@@ -343,7 +344,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Fogo', 'Terra', 'Pedra'],
   },
   {
-    id: 176, nome: 'Togetic', numero: '#176', selecionado: true,
+    id: 176, instanceId: 28, nome: 'Togetic', numero: '#176', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/togetic.gif',
     tipos: ['Fada', 'Voador'],
     estatisticas: [
@@ -354,7 +355,7 @@ export const todosPokemons: Pokemon[] = [
     vantagens: ['Lutador', 'Inseto', 'Fada'],
   },
   {
-    id: 500, nome: 'Emolga', numero: '#500', selecionado: true,
+    id: 500, instanceId: 29, nome: 'Emolga', numero: '#500', selecionado: true,
     imagemUrl: 'https://img.pokemondb.net/sprites/black-white/anim/normal/emolga.gif',
     tipos: ['Elétrico', 'Voador'],
     estatisticas: [
