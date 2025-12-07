@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="dashboard-layout">
       
-      <DashboardColumn titulo="PC (Box 1)" gridType="pc">
+      <DashboardColumn titulo="PC (Box 1)" gridType="pc" onMoverPokemon={moverPokemon}>
         {boxPokemons.map(pokemon => (
           <PCPokemonIcon
             key={pokemon.instanceId}
@@ -42,7 +42,7 @@ function App() {
         ))}
       </DashboardColumn>
 
-      <DashboardColumn titulo="Equipe Atual" gridType="time">
+      <DashboardColumn titulo="Equipe Atual" gridType="time" onMoverPokemon={moverPokemon}>
         {equipePokemons.map(pokemon => (
           <TeamPokemonCard 
             key={pokemon.instanceId} 
