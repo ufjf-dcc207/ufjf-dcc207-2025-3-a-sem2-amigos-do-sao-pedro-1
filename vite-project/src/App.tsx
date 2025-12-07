@@ -35,6 +35,7 @@ function App() {
         {boxPokemons.map(pokemon => (
           <PCPokemonIcon
             key={pokemon.instanceId}
+            instanceId={pokemon.instanceId}
             imagemUrl={pokemon.imagemUrl}
             nome={pokemon.nome}
           />
@@ -46,6 +47,7 @@ function App() {
           <TeamPokemonCard 
             key={pokemon.instanceId} 
             id={pokemon.id}
+            instanceId={pokemon.instanceId}
             imagemUrl={pokemon.imagemUrl}
             nome={pokemon.nome}
             numero={pokemon.numero}
