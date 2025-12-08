@@ -10,21 +10,71 @@ function App() {
   const [pokemons, setPokemons] = useState(todosPokemons);
   
   const [filterType, setFilterType] = useState('');
-  const [filterMinStat, setFilterMinStat] = useState(0); 
+  const [filterMinHP, setFilterMinHP] = useState(0);
+  const [filterMinATK, setFilterMinATK] = useState(0);
+  const [filterMinDEF, setFilterMinDEF] = useState(0);
+  const [filterMinSpATK, setFilterMinSpATK] = useState(0);
+  const [filterMinSpDEF, setFilterMinSpDEF] = useState(0);
+  const [filterMinSpeed, setFilterMinSpeed] = useState(0);
   const [filterVantagem, setFilterVantagem] = useState('');
   const [filterFraqueza, setFilterFraqueza] = useState('');
+  const [filterBusca, setFilterBusca] = useState('');
   
   const equipePokemons = pokemons.filter(p => p.selecionado);
   const boxPokemons = pokemons.filter(p => !p.selecionado);
   
   const boxPokemonsFiltrados = boxPokemons.filter(pokemon => {
+    if (filterBusca) {
+      const busca = filterBusca.toLowerCase();
+      const nomeMatch = pokemon.nome.toLowerCase().includes(busca);
+      const numeroMatch = pokemon.numero.toLowerCase().includes(busca);
+      if (!nomeMatch && !numeroMatch) {
+        return false;
+      }
+    }
+
     if (filterType && !pokemon.tipos.includes(filterType as any)) {
       return false;
     }
 
-    if (filterMinStat > 0) {
-      const atkStat = pokemon.estatisticas.find(stat => stat.nome === 'ATK');
-      if (!atkStat || atkStat.valor < filterMinStat) {
+    if (filterMinHP > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'HP');
+      if (!stat || stat.valor < filterMinHP) {
+        return false;
+      }
+    }
+
+    if (filterMinATK > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'ATK');
+      if (!stat || stat.valor < filterMinATK) {
+        return false;
+      }
+    }
+
+    if (filterMinDEF > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'DEF');
+      if (!stat || stat.valor < filterMinDEF) {
+        return false;
+      }
+    }
+
+    if (filterMinSpATK > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'Sp.ATK');
+      if (!stat || stat.valor < filterMinSpATK) {
+        return false;
+      }
+    }
+
+    if (filterMinSpDEF > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'Sp.DEF');
+      if (!stat || stat.valor < filterMinSpDEF) {
+        return false;
+      }
+    }
+
+    if (filterMinSpeed > 0) {
+      const stat = pokemon.estatisticas.find(s => s.nome === 'SPEED');
+      if (!stat || stat.valor < filterMinSpeed) {
         return false;
       }
     }
@@ -43,9 +93,15 @@ function App() {
 
   function limparFiltros() {
     setFilterType(''); 
-    setFilterMinStat(0); 
+    setFilterMinHP(0);
+    setFilterMinATK(0);
+    setFilterMinDEF(0);
+    setFilterMinSpATK(0);
+    setFilterMinSpDEF(0);
+    setFilterMinSpeed(0);
     setFilterVantagem('');
     setFilterFraqueza('');
+    setFilterBusca('');
   }
 
   function moverPokemon(instanceId: number, destino: 'equipe' | 'box') {
@@ -71,12 +127,24 @@ function App() {
         <PCFilters
           filterType={filterType}
           setFilterType={setFilterType}
-          filterMinStat={filterMinStat}
-          setFilterMinStat={setFilterMinStat}
+          filterMinHP={filterMinHP}
+          setFilterMinHP={setFilterMinHP}
+          filterMinATK={filterMinATK}
+          setFilterMinATK={setFilterMinATK}
+          filterMinDEF={filterMinDEF}
+          setFilterMinDEF={setFilterMinDEF}
+          filterMinSpATK={filterMinSpATK}
+          setFilterMinSpATK={setFilterMinSpATK}
+          filterMinSpDEF={filterMinSpDEF}
+          setFilterMinSpDEF={setFilterMinSpDEF}
+          filterMinSpeed={filterMinSpeed}
+          setFilterMinSpeed={setFilterMinSpeed}
           filterVantagem={filterVantagem}
           setFilterVantagem={setFilterVantagem}
           filterFraqueza={filterFraqueza}
           setFilterFraqueza={setFilterFraqueza}
+          filterBusca={filterBusca}
+          setFilterBusca={setFilterBusca}
           limparFiltros={limparFiltros}
         />
         
